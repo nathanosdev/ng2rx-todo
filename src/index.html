@@ -11,10 +11,36 @@
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<title>Angular 2 Webpack Ngrx Example App</title>
+
+	<style>
+		html {
+			height: 100%;
+			display: flex;
+		}
+		body {
+			flex: 1;
+			margin: 0;
+		}
+		.loading {
+			height: 100%;
+			background-color: #f5f5f5;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 100;
+			font: 100px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: rgba(175, 47, 47, 0.15);
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		}
+	</style>
 </head>
 
 <body>
-	<amd-app>Loading...</amd-app>
+	<amd-app>
+		<div class="loading">
+			Loading....
+		</div>
+	</amd-app>
 </body>
 
 </html>
