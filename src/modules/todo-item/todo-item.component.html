@@ -1,0 +1,38 @@
+<li
+  [class.completed]="todo.completed"
+  [class.editing]="editing">
+
+  <div class="view">
+    <input
+      [(ngModel)]="todo.completed"
+      (click)="toggleStatus()"
+      class="toggle"
+      type="checkbox">
+
+    <label (dblclick)="editText()">
+      {{todo.text}}
+    </label>
+
+    <button
+      class="destroy"
+      (click)="removeTodo(todo.id)"
+    ></button>
+  </div>
+
+  <form
+    class="todo-item-form"
+    *ngIf="editing"
+    (ngSubmit)="saveText()"
+    novalidate>
+
+    <input
+      [(ngModel)]="text"
+      (blur)="stopEditing()"
+      (keyup.escape)="stopEditing()"
+      autocomplete="off"
+      autoFocus
+      class="edit"
+      name="text"
+      type="text">
+  </form>
+</li>

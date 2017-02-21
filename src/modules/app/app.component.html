@@ -1,0 +1,20 @@
+<section class="todoapp">
+  <amd-todo-form
+    (addTodo)="addTodo($event)">
+  </amd-todo-form>
+
+  <amd-todo-list
+    [todos]="todos"
+    (update)="updateTodo($event)"
+    (remove)="deleteTodo($event)"
+    (toggleAll)="toggleAllTodos($event)">
+  </amd-todo-list>
+  
+  <amd-todo-info
+    [todosTotal]="todosTotal"
+    [todosIncomplete]="todosIncomplete"
+    (clearCompleted)="clearCompleted($event)">
+  </amd-todo-info>
+</section>
+
+<amd-app-info></amd-app-info>

@@ -1,0 +1,15 @@
+<header class="header">
+  <h1>todos</h1>
+  <form (ngSubmit)="submit()" novalidate>
+    <input
+      [(ngModel)]="text"
+      (keyup.escape)="clear()"
+      class="new-todo"
+      placeholder="What needs to be done?"
+      autofocus
+      autocomplete="off"
+      name="text"
+      required
+      type="text">
+  </form>
+</header>

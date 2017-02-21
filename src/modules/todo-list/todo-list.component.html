@@ -1,0 +1,16 @@
+<section class="main">
+  <input
+    class="toggle-all"
+    type="checkbox"
+    [(ngModel)]="completed"
+    (ngModelChange)="toggleAllTodos()">
+  <label for="toggle-all">Mark all as complete</label>
+  <ul class="todo-list">
+    <amd-todo-item 
+      *ngFor="let todo of todos | async"
+      [todo]="todo"
+      (remove)="removeTodo($event)"
+      (update)="updateTodo($event)">
+    </amd-todo-item>
+  </ul>
+</section>

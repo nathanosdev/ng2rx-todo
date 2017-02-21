@@ -1,0 +1,14 @@
+<footer class="footer" *ngIf="todosTotal > 0">
+  <span class="todo-count">
+    <strong>{{todosIncomplete}}</strong>
+    item<span *ngIf="todosIncomplete !== 1">s</span>
+    left
+  </span>
+
+  <button
+    class="clear-completed"
+    *ngIf="todosTotal - todosIncomplete > 0"
+    (click)="clearCompletedTodos()">
+    Clear completed
+  </button>
+</footer>

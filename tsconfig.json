@@ -1,0 +1,49 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "es2015",
+		"moduleResolution": "node",
+
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"importHelpers": true,
+		"pretty": true,
+		"sourceMap": true,
+
+		"baseUrl": "./src",
+		"rootDir": "./src",
+		"sourceRoot": "./src",
+		"outDir": "./build",
+
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"alwaysStrict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noUnusedLocals": true,
+		"noImplicitReturns": true,
+		"strictNullChecks": true,
+		"noFallthroughCasesInSwitch": true,
+		"skipLibCheck": true,
+
+		"lib": [
+			"dom",
+			"es6"
+		],
+		"types": [
+			"webpack",
+			"node"
+		]
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+	"exclude": [
+		".vscode",
+		"config",
+		"coverage",
+		"node_modules",
+		"build",
+		"**/*.spec.ts"
+	]
+}
