@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const envConfig = require('./webpack.env');
 
@@ -9,7 +11,12 @@ let plugins = [
 	new webpack.ContextReplacementPlugin(
 		/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
 		__dirname
-	)
+	),
+	new CopyWebpackPlugin([{
+		from: 'manifest.json'
+	}, {
+		from: 'browserconfig.xml'
+	}])
 ];
 
 if (envConfig.isProduction) {
@@ -42,5 +49,10 @@ if (envConfig.isProduction) {
 		template: './src/index.html'
 	}));
 }
+
+plugins.push(new OfflinePlugin({
+	updateStrategy: 'all',
+	version: require('../package.json').version
+}));
 
 module.exports = plugins;

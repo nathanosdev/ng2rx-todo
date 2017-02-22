@@ -1,0 +1,48 @@
+{
+  "name": "Angular 2 Ngrx Example App",
+  "short_name": "ng2rx Todo",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#E2252A",
+  "background_color": "#E2252A",
+  "description": "An example app demonstrating how to use the Flux architecture with Angular 2",
+  "icons": [
+    {
+      "src": "logo-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "http://ng2rx-todo.nathan-mcgrath.com/"
+    }
+  ]
+}
