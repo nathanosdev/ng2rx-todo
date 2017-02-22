@@ -1,6 +1,6 @@
 {
   "name": "ng2rx-todo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An example app demonstrating how to use the Flux architecture with Angular 2",
   "main": "build/app.js",
   "scripts": {

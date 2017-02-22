@@ -52,7 +52,8 @@ if (envConfig.isProduction) {
 
 plugins.push(new OfflinePlugin({
 	updateStrategy: 'all',
-	version: require('../package.json').version
+	version: require('../package.json').version,
+	responseStrategy: 'network-first'
 }));
 
 module.exports = plugins;
