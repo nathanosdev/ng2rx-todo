@@ -16,7 +16,6 @@ import { Todo } from '../todo';
 })
 
 export class TodoListComponent implements OnInit {
-	@Input() public filter: string;
 	@Input() public todos: Observable<Array<Todo>>;
 
 	@Output() public remove: EventEmitter<any> = new EventEmitter(false);
